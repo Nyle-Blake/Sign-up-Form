@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Protest Strike", sans-serif;
+  font-weight: 300;
+}
+
+body {
+  display: flex;
+}
+
+fieldset:first-child {
+  margin-top: 1.5%;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  gap: 100px;
+  margin-bottom: 1.5%
+}
+form {
+  background-color: white;
+  width: 100vw;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-right: 20vw;
+  /* -webkit-box-shadow: 0px 5px 13px 8px rgba(0,0,0,0.46); 
+  box-shadow: 0px 5px 13px 8px rgba(0,0,0,0.46); */
+  -webkit-box-shadow: 0px 12px 37px 8px rgba(145,145,145,0.35); 
+  box-shadow: 0px 12px 37px 8px rgba(145,145,145,0.35);
+}
+
+label {
+  font-size: 1.1rem;
+}
+
+input {
+  border-radius: 5px;
+  border: 2px solid black
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+input:valid {
+  border: 2px solid green;
+}
+
+fieldset > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-container, .title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.form-container {
+  width: 65vw;
+  background-color: #f6f6f6;
+}
+
+.title-container {
+  width: 35vw;
+  background-color: blue;
+  background-image: ;
+}
