@@ -7,6 +7,7 @@
 
 body {
   display: flex;
+  overflow: hidden;
 }
 
 fieldset:first-child {
@@ -21,13 +22,13 @@ fieldset {
 }
 form {
   background-color: white;
-  width: 100vw;
+  width: 60vw;
   height: 45vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-right: 20vw;
+  /* padding-right: 20vw; */
   /* -webkit-box-shadow: 0px 5px 13px 8px rgba(0,0,0,0.46); 
   box-shadow: 0px 5px 13px 8px rgba(0,0,0,0.46); */
   -webkit-box-shadow: 0px 12px 37px 8px rgba(145,145,145,0.35); 
@@ -40,15 +41,15 @@ label {
 
 input {
   border-radius: 5px;
-  border: 2px solid black
+  border: 2px solid #000;
 }
 
 input:invalid {
-  border: 2px solid red;
+  border: 2px solid #f02416;
 }
 
 input:valid {
-  border: 2px solid green;
+  border: 2px solid #16f050;
 }
 
 fieldset > div {
@@ -66,12 +67,55 @@ fieldset > div {
 }
 
 .form-container {
-  width: 65vw;
+  width: 60vw;
   background-color: #f6f6f6;
 }
 
 .title-container {
-  width: 35vw;
-  background-color: blue;
-  background-image: ;
+  position: absolute;
+  width: 40vw;
+  height: calc(100vh + 600px);
+  top: -300px;
+  left: 60vw;
+  background-image: url(images/geopattern.png);
+  background-repeat: repeat;
+  animation: background-move 8s infinite;
+}
+
+.title-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 30%;
+  right: 0;
+  width: 40vw;
+  height: 10vh;
+  opacity: 0.5;
+  background-color: grey;
+}
+
+.title-header > h1 {
+  font-family: "Sixtyfour", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 55px;
+  max-width: fit-content;
+  opacity: 1;
+}
+
+.title {
+  opacity: 1;
+}
+
+.title > img {
+  width: 50px;
+  margin-left: 30px;
+}
+
+@keyframes background-move {
+  100% {
+    translate: 0 300px;
+  }
 }
